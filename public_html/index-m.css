@@ -1,0 +1,402 @@
+body{
+	background: rgb(38,77,89);
+	background: linear-gradient(90deg, rgba(38,77,89,1) 0%, rgba(112,102,149,1) 100%);
+	overflow-x: hidden;
+}
+/*topnav*/
+.navbar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 1em;
+	z-index: 10;
+}
+#userLink{
+	opacity: 0.5;
+	color: white;
+	text-decoration: none;
+}
+/*sideNav*/
+/*menu button*/
+#navButton{
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1em;
+	color: white;
+	z-index: 10;
+}
+#navButton:hover{
+	cursor: pointer;
+}
+/*menu links*/
+.nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: 0.5s transform;
+	z-index: 10;
+}
+.nav ul{
+	padding-top: 3em;
+	list-style-type: none;
+}
+.nav-item{
+	padding: 1em;
+}
+.nav-link{
+	color: black;
+	font-size: 4em;
+	font-family: 'Playfair Display', serif;
+	text-decoration: none;
+	border-bottom: solid black 0;
+}
+.nav-link:hover{
+	border-bottom: solid black 8px;
+	color: black;
+	transition: all 0.2s ease-out;
+}
+/*close menu button*/
+#closeMenu{
+	z-index: 20;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	height: 40px;
+	width: 0%;
+	transform: translateX(-1%);
+	transition: 0.5s;
+	background: rgb(38,77,89);
+	background: linear-gradient(90deg, rgba(38,77,89,1) 0%, rgba(112,102,149,1) 100%);
+}
+#closeNavButton{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.5em;
+	color: white;
+}
+#closeNavButton:hover{
+	cursor: pointer;
+}
+/*intro*/
+/*intro paragraph*/
+.intro{
+	margin: 20% 0 0 10%;
+}
+.introParagraph h1{
+	font-family: 'Playfair Display', serif;
+	font-size: 3em;
+	margin: 0;
+}
+.introParagraph h2{
+	font-family: 'Playfair Display', serif;
+	font-size: 2em;
+	margin: 0;
+}
+#firstName{
+	color: lightpink;
+}
+/*intro animations*/
+#abs_bp{
+	height: 50%;
+	width: auto;
+	position: absolute;
+	top: 20%;
+	right: 10%;
+	transition: all 10s ease;
+}
+#abs_bp:hover{
+	transform: rotate(360deg);
+}
+#abs_bpu{
+	height: 50%;
+	width: auto;
+	position: absolute;
+	top: 40%;
+	right: 30%;
+	transition: all 10s ease;
+}
+#abs_bpu:hover{
+	transform: rotate(360deg);
+}
+#whiteboard{
+	position: absolute;
+	top: 30%;
+	right: 30%;
+}
+#whiteboard h1{
+	margin: 0;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+/*about me*/
+#aboutMe{
+	position: relative;
+	margin: 50% 0 0 0;;
+	padding: 2em;
+}
+#aboutMeDiv{
+	position: absolute;
+	left: 15%;
+	top: -0.05%;
+	height: 100px;
+	width: 0;
+	background-color: lightpink;
+	z-index: -1;
+	transition: width 1s ease;
+}
+#aboutMeTitle, #projectListTitle, #contactMeTitle{
+	margin-left: 10%;
+	font-size: 3em;
+	font-family: 'Playfair Display', serif;
+}
+.aboutMe_sections{
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-left: 10%;
+	transform: rotate(270deg);
+}
+
+.aboutMe_sections li{
+	font-size: 2em;
+	transition: transform 1s ease;
+}
+#Goals{
+	color: lightpink;
+}
+#Goals:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+#Education:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+#Hobbies:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.swiper-container{
+	visibility: hidden;
+}
+.about-col div{
+	position: absolute;
+	left: 40%;
+	width: 600px;
+	height: 400px;
+	font-family: 'Open Sans', sans-serif;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+.about-col div h1{
+	color: lightpink;
+}
+.about-col div p, .about-col div li{
+	color: white;
+	opacity: 0.5;
+}
+#goals-col{
+	opacity: 1;
+}
+/*project list*/
+#projectList{
+	position: relative;
+	margin: 50% 0 25% 10%;
+	padding: 2em;
+}
+#projectListDiv{
+	position: absolute;
+	right: 70%;
+	top: 0%;
+	height: 100px;
+	width: 0;
+	background-color: lightpink;
+	z-index: -1;
+	transition: width 1s ease;
+}
+.msg-container{	/*fix*/
+	width: 1000px;
+	height: 1500px;
+	position: absolute;
+	left: 2%;
+	overflow: hidden;
+	padding: 1em 2em;
+}
+
+.msg-col{
+	width: 800px;
+	height: 800px;
+	margin-right: 250px;
+}
+.msg-col h1{
+	color: lightpink;
+	font-size: 2em;
+	z-index: 10;
+	font-family: 'Playfair Display', serif;
+}
+.msg-col-p{		/*fix?*/
+	color: white;
+	opacity: 0.2;
+	font-size: 1em;	
+	background-color: black;
+	padding: 2em 2em;
+	border-radius: 10px;
+	font-family: 'Open Sans', sans-serif;
+}
+.msg-col-p dt{	/*fix*/
+	color: lightpink;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.msg-col-p a{	/*fix*/
+	color: #86e3ce;
+	transition: background-color 1s ease;
+}
+.msg-col-p a:hover{	/*fix, i wanna make it highlight instead!*/
+	background-color: black;
+}
+.controller{	/*fix*/
+	width: 1px;
+	height: 240px;
+	display: block;
+	background-color: #86e3ce;
+	opacity: 0.5;
+	position: absolute;
+	right: 5%;
+	top: 150%;
+}
+#line1, #line2, #line3{
+	height: 80px;
+	width: 10px;
+	cursor: pointer;
+	transform: translateX(-50%);
+}
+#active{
+	width: 5px;
+	height: 80px;
+	border-radius: 10px;
+	background-color: #86e3ce;
+	position: absolute;
+	top: 0%;
+	transform: translateX(-50%);
+	transition: 0.5s;
+}
+#slider{
+	display: inline-flex;
+	transition: 0.5s;
+}
+/*contact me*/
+#contactMe{	/*fixed?*/
+	position: relative;
+	margin: 100% 0 0 10%;
+	padding: 2em 2em 4em 2em;
+}
+#contactMeTitle{
+	margin-left: 20%;
+}
+#contactMeDiv{
+	position: absolute;
+	left: 40%;
+	top: 10%;
+	height: 100px;
+	width: 0;
+	background-color: lightpink;
+	z-index: -1;
+	transition: width 1s ease;
+}
+#contactMeDiv2{
+	position: absolute;
+	right: 60%;
+	top: 0%;
+	height: 100px;
+	width: 0;
+	background-color: #f6f5e1;
+	z-index: -1;
+	transition: width 1s ease;
+}
+
+form{
+	position: relative;
+	top: 0;
+	left: 15%;
+	width: 80%;
+	margin-top: 5%;
+	padding-bottom: 5em;
+}
+
+label{
+	font-size: 2em;
+	color: lightpink;
+	font-family: 'Playfair Display', serif;
+}
+
+input[name], textarea[name]{
+	width: 500px;
+	padding: 1em 2em 0 1em;
+	border:0 none;
+	border-bottom: 1px solid black;
+	background: transparent;
+	transition: border 1s ease;
+}
+input[name]:hover, textarea[name]:hover{
+	border-bottom: 1px solid #f6f5e1;
+}
+input[name]:focus, textarea[name]:focus{
+	color: #f6f5e1;
+	font-family: 'Open Sans', sans-serif;
+}
+input[name]{
+	margin-left: 40px;
+}
+textarea[name]{
+	margin-left: 40px;
+	padding-top: 20%;
+}
+input[name]::placeholder,textarea[name]::placeholder{
+	color: black;
+	opacity: 1;
+	margin-bottom: 0;
+	font-family: 'Open Sans', sans-serif;
+	transition: color 1s ease;
+}
+
+input[name]:hover::placeholder, textarea[name]:hover::placeholder{
+	color: #f6f5e1;
+}
+input[type="submit"]{
+	margin-top: 2em;
+	background: #f6f5e1;
+	border: 0 none;
+	border-radius: 5%;
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	right: 20%;
+	bottom: 0;
+	opacity: 0.5;
+	transition: opacity 1s ease;
+}
+input[type="submit"]:hover{
+	opacity: 1;
+}
+#loadDiv{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: white;
+	z-index: 1000;
+	visibility: hidden;
+	transition: all 0.5s ease-in;
+}
