@@ -22,5 +22,3 @@ able to improve my web development skills in general.
 - 000webhostapp
 
 The main focus of my website was to experiment using different animations and transitions, with a focus on JavaScript.
-
-Im testing out a new feature
